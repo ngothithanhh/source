@@ -17,17 +17,17 @@ body {
 .falling-text {
     position: absolute;
     font-size: 2rem;
-    background: linear-gradient(90deg, #ff2222 60%);
+    background: linear-gradient(90deg, #fff 40%, #ff6f91 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: #fff; /* fallback */
     text-shadow:
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 40px #ff2222,
-        0 0 80px #ff4444;
-    opacity: 0.9;
+        0 0 8px #fff,
+        0 0 16px #fff,
+        0 0 24px #ff6f91,
+        0 0 40px #ffb3c6;
+    opacity: 0.92;
     white-space: nowrap;
     will-change: transform, opacity;
     animation: fall3d linear forwards;
@@ -92,11 +92,11 @@ body {
         0 0 20px #fff;
 }
 .red-char {
-    color: #ff2222;
+    color: #ff6f91;
     text-shadow:
-        0 0 10px #ff2222,
-        0 0 20px #ff4444,
-        0 0 40px #ff2222;
+        0 0 8px #ff6f91,
+        0 0 16px #ffb3c6,
+        0 0 24px #ff6f91;
 }
 
 @media (max-width: 600px) {
