@@ -1,0 +1,100 @@
+body {
+    background: #000;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.falling-text-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    perspective: 800px;
+    perspective-origin: 20% 0%; /* Nghiêng sang trái trên */
+}
+
+.falling-text {
+    position: absolute;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #ff2222 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #fff; /* fallback */
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #ff2222,
+        0 0 80px #ff4444;
+    opacity: 0.9;
+    white-space: nowrap;
+    will-change: transform, opacity;
+    animation: fall3d linear forwards;
+}
+
+@keyframes fall3d {
+    0% {
+        opacity: 1;
+        transform: translate3d(var(--x), -50px, var(--z)) scale(1.2);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(var(--x), 100vh, var(--z)) scale(0.8);
+    }
+}
+
+.stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    perspective: 800px;
+    perspective-origin: 20% 0%; /* Nghiêng nền sao giống chữ */
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: twinkle 2s infinite, fallStar 8s linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.2; }
+}
+
+@keyframes fallStar {
+    0% {
+        top: -2px;
+        transform: translateZ(var(--z)) scale(var(--scale));
+    }
+    100% {
+        top: 100vh;
+        transform: translateZ(var(--z)) scale(var(--scale));
+    }
+}
+
+.white-char {
+    color: #fff;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff;
+}
+.red-char {
+    color: #ff2222;
+    text-shadow:
+        0 0 10px #ff2222,
+        0 0 20px #ff4444,
+        0 0 40px #ff2222;
+}

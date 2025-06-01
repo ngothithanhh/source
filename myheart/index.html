@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chữ rơi xuống</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <label style="color:white;position:absolute;z-index:10;left:10px;top:10px;">
+        Góc nhìn (perspective): 
+        <input id="perspective-slider" type="range" min="200" max="2000" value="800">
+        <span id="perspective-value">800</span>px
+    </label>
+    <div class="falling-text-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
