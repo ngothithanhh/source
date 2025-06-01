@@ -98,3 +98,22 @@ body {
         0 0 20px #ff4444,
         0 0 40px #ff2222;
 }
+
+@media (max-width: 600px) {
+    .falling-text {
+        font-size: 1.1rem;
+    }
+    .falling-text-container {
+        height: 100vh;
+        width: 100vw;
+    }
+    .stars {
+        width: 100vw;
+        height: 100vh;
+    }
+    label {
+        font-size: 0.9rem !important;
+        left: 5px !important;
+        top: 5px !important;
+    }
+}
