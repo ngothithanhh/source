@@ -57,7 +57,7 @@ setInterval(()=> {
     createFallingText();
     createFallingText();
     createFallingText();
-},200); // Tạo 2 chữ mỗi 400ms
+},200); // Tạo  chữ mỗi 200ms
 
 // Điều chỉnh góc nhìn (perspective) bằng slider
 const slider = document.getElementById('perspective-slider');
