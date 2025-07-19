@@ -1,0 +1,19 @@
+LoginApp/
+│
+├── database/
+│   └── JDBCUtil.java         // Kết nối DB
+│
+├── dao/
+│   └── UserDAO.java          // Xử lý DB người dùng
+│
+├── model/
+│   └── User.java             // Lớp người dùng
+│
+├── view/
+│   ├── LoginForm.java        // Form đăng nhập
+│   └── RegisterForm.java     // Form đăng ký
+│
+├── main/
+│   └── Main.java             // Chạy chương trình
+│
+└── userdb.sql                // Câu lệnh tạo bảng
